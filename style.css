@@ -1,0 +1,400 @@
+@import url('https://fonts.googleapis.com/css2?family=Merriweather:ital,opsz,wght@0,18..144,300..900;1,18..144,300..900&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Merriweather:ital,opsz,wght@0,18..144,300..900;1,18..144,300..900&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
+
+:root {
+    --base-color: #ffffff;
+    --text-color: black;
+    --primary-color : #ffc06e;
+    --Secondary-color: #8d8dff;
+    --color-1 : #F9F6F3;
+    --color-2 : #F3F7F9;
+    --color-3 : #F6F3F9; 
+
+}
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+html{
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif ;
+    color: var(--text-color);
+    scroll-behavior:smooth;
+}
+body{
+    padding: 1em;
+    background-color: var(--base-color);
+
+}
+h1,h2,h3{
+    font-family: Merriweather , Poppins , 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+nav{
+    margin: 1em auto 3em auto;
+    width: min(1000px,100%);
+
+}
+
+nav ul{
+    display: flex;
+    align-items: center;
+    list-style-type: none;
+    gap: 2em;
+}
+nav li:first-child{
+    margin-right: auto;
+    font-family: Merriweather, Poppions;
+    font-weight: bold;
+}
+nav a {
+    text-decoration: none;
+    color: var(--text-color);
+
+}
+nav a:hover { 
+    text-decoration: underline;
+    /* transition: ease-out;
+    transition: .3; */
+
+}
+header , section {
+    margin: 2em auto;
+    width: min( 75em , 100%) ;
+    background-color: var(--color-1);
+    padding: min(2em, 15%);
+    border-radius: 1em;
+
+}
+
+.flex-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+    gap: 4em;
+
+
+}
+
+header img{
+    max-width: 100% ;
+    border-radius: 1em;
+    object-fit: cover;
+    object-position: bottom;
+}
+
+.text-container {
+    flex: 0 1 30em;
+    font-size: 1.25rem;
+}
+
+.cta-button{
+    margin-top: 20px;
+   display: inline-block;
+    text-decoration:none;
+    color: white;
+    background-color: var(--Secondary-color);
+    padding: .75em 1.25em;
+    border-radius: 11px;
+    font-weight: 600;
+
+
+}
+.cta-button2{
+    margin-top: 20px;
+    display: inline-block;
+    text-decoration:none;
+    color: white;
+    background-color: var(--primary-color);
+    padding: .75em 1.25em;
+    border-radius: 11px;
+    font-weight: 600;
+
+}
+
+.cta-button:hover{
+    border-bottom: 4px solid rgb(87, 170, 218)d;
+    color: var(--primary-color);
+    transition: .1s;
+    transition-timing-function: ease-out;
+    transform: scale(1.05);
+}
+
+.cta-button2.cta-button2:hover{
+    border-bottom: 4px solid rgb(70, 168, 224)d;
+    color: rgb(87, 170, 218);
+    transition: .1s;
+    transition-timing-function: ease-out;
+    transform: scale(1.05);
+}
+
+section {
+    padding: 3em min(2em, 15%);
+    background-color: var(--color-2);
+    text-align: center;
+}
+section img{
+    margin-top: 30px;
+    max-width: 50% ;
+    border-radius: 20px;
+    object-fit: cover;
+    object-position: bottom;
+}
+
+
+h2{
+    font-size: 40px;
+}
+section .text-container p {
+    margin-top: 10px;
+    font-size: 1em;
+}
+
+/* Skills Section */
+.skills-section {
+    padding: 80px 8%;
+    text-align: center;
+    background: #f5f8fa;
+}
+
+.skills-section h2 {
+    font-size: 42px;
+    margin-bottom: 10px;
+}
+
+.skills-subtitle {
+    font-size: 17px;
+    color: #666;
+    margin-bottom: 40px;
+}
+
+/* Cards Container */
+.skills-container {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 25px;
+    max-width: 1000px;
+    margin: auto;
+}
+
+/* Individual Card */
+.skill-card {
+    background: #ffffff;
+    padding: 30px;
+    border: 1px solid #ddd;
+    border-radius: 15px;
+    text-align: left;
+    transition: 0.3s ease;
+}
+
+.skill-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 10px 25px rgba(0, 0, 0, 0.08);
+}
+
+.skill-card h3 {
+    color: #d85b8a;
+    margin-bottom: 20px;
+    font-size: 21px;
+}
+
+/* Skill Tags */
+.skills-list {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 10px;
+}
+
+.skills-list span {
+    background: #eef4ff;
+    color: #4d8ff5;
+    padding: 8px 14px;
+    border-radius: 20px;
+    font-size: 14px;
+    transition: 0.2s;
+}
+
+.skills-list span:hover {
+    background: #4d8ff5;
+    color: white;
+}
+
+/* Mobile */
+@media (max-width: 700px) {
+
+    .skills-container {
+        grid-template-columns: 1fr;
+    }
+
+    .skills-section h2 {
+        font-size: 34px;
+    }
+
+    .skill-card {
+        padding: 22px;
+    }
+}
+
+
+/* =========================
+   Resume Section
+========================= */
+/* 
+.resume-section {
+    padding: 100px 8%;
+    background: #ffffff;
+} */
+
+.resume-content {
+    max-width: 1000px;
+    margin: auto;
+
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+
+    gap: 60px;
+}
+
+/* Left Side */
+
+.resume-text {
+    max-width: 550px;
+}
+
+.resume-label {
+    color: #4d8ff5;
+    font-size: 14px;
+    font-weight: bold;
+    letter-spacing: 2px;
+}
+
+.resume-text h2 {
+    font-size: 42px;
+    line-height: 1.2;
+    margin: 12px 0 20px;
+}
+
+.resume-text p {
+    color: #666;
+    font-size: 17px;
+    line-height: 1.7;
+    margin-bottom: 30px;
+}
+
+/* Download Button */
+
+.resume-button {
+    display: inline-flex;
+    align-items: center;
+    gap: 10px;
+
+    padding: 14px 25px;
+
+    background: #4d8ff5;
+    color: white;
+
+    text-decoration: none;
+    border-radius: 10px;
+
+    font-size: 16px;
+    font-weight: 500;
+
+    transition: 0.3s ease;
+}
+
+.resume-button:hover {
+    transform: translateY(-4px);
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.12);
+}
+
+/* Right Resume Card */
+
+.resume-box {
+    width: 300px;
+    padding: 40px 30px;
+
+    text-align: center;
+
+    background: #f5f8fa;
+
+    border: 1px solid #ddd;
+    border-radius: 18px;
+
+    transition: 0.3s ease;
+}
+
+.resume-box:hover {
+    transform: translateY(-6px);
+    box-shadow: 0 12px 25px rgba(0, 0, 0, 0.08);
+}
+
+.resume-icon {
+    font-size: 45px;
+    margin-bottom: 15px;
+}
+
+.resume-box h3 {
+    font-size: 24px;
+    margin-bottom: 10px;
+    color: #d85b8a;
+}
+
+.resume-box p {
+    color: #666;
+    font-size: 14px;
+    margin-bottom: 25px;
+}
+
+.view-resume {
+    color: #4d8ff5;
+    text-decoration: none;
+    font-weight: 500;
+}
+
+.view-resume:hover {
+    text-decoration: underline;
+}
+
+
+.contact-section {
+    padding: 80px 8%;
+    text-align: center;
+    background: #f5f8fa;
+}
+
+.contact-section h2 {
+    font-size: 42px;
+    margin-bottom: 10px;
+}
+
+.contact-section p {
+    color: #666;
+    font-size: 17px;
+    margin-bottom: 30px;
+}
+
+.social-links {
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+    flex-wrap: wrap;
+}
+
+.social-links a {
+    text-decoration: none;
+    color: #4d8ff5;
+    border: 1px solid #ddd;
+    background: white;
+    padding: 14px 25px;
+    border-radius: 10px;
+    font-size: 17px;
+    transition: 0.3s;
+}
+
+.social-links a:hover {
+    transform: translateY(-4px);
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.08);
+    color: #d85b8a;
+}
